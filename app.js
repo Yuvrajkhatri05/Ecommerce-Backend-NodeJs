@@ -28,6 +28,10 @@ app.use(cors({
     credentials: true
 }));
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "Public", "index.html"));
+});
+
 // AUTH APIs
 app.use("/auth", require("./Routes/authRoutes"));
 
