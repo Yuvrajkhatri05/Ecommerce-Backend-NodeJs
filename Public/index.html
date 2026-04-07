@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ecommerce API Dashboard</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #38bdf8;
+    }
+    .section {
+      margin-top: 30px;
+    }
+    .api {
+      background: #1e293b;
+      padding: 12px;
+      margin: 8px 0;
+      border-radius: 8px;
+    }
+    .method {
+      font-weight: bold;
+      color: #22c55e;
+    }
+    button {
+      margin-left: 10px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>🚀 Ecommerce API Dashboard</h1>
+
+<!-- USER APIs -->
+<div class="section">
+  <h2>👤 User APIs</h2>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /auth/signup
+    <button onclick="copy('/auth/signup')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /auth/login
+    <button onclick="copy('/auth/login')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /user/cart
+    <button onclick="copy('/user/cart')">Copy</button>
+  </div>
+
+</div>
+
+<!-- PRODUCT APIs -->
+<div class="section">
+  <h2>📦 Product APIs</h2>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /product/:productType
+    <button onclick="copy('/product/men')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /product/sell
+    <button onclick="copy('/product/sell')">Copy</button>
+  </div>
+
+</div>
+
+<!-- SELLER APIs -->
+<div class="section">
+  <h2>🏪 Seller APIs</h2>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /seller/signup
+    <button onclick="copy('/seller/signup')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /seller/orders
+    <button onclick="copy('/seller/orders')">Copy</button>
+  </div>
+
+</div>
+
+<!-- PAYMENT -->
+<div class="section">
+  <h2>💳 Payment APIs</h2>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /payment
+    <button onclick="copy('/payment')">Copy</button>
+  </div>
+
+</div>
+
+<script>
+  const baseURL = "https://ecommerce-backend-nodejs-9sup.onrender.com";
+
+  function copy(path) {
+    const fullUrl = baseURL + path;
+    navigator.clipboard.writeText(fullUrl);
+    alert("Copied: " + fullUrl);
+  }
+</script>
+
+</body>
+</html>
