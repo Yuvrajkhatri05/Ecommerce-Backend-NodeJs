@@ -1,4 +1,4 @@
-const User = require("../models/user");
+const User = require("../Models/User");
 
 // VERIFY CONTROLLER
 exports.userVerify = async(req, res) => {
