@@ -37,6 +37,7 @@
 <body>
 
 <h1>🚀 Ecommerce API Dashboard</h1>
+<p>For More Documentation use /api-docs</p>
 
 <!-- USER APIs -->
 <div class="section">
@@ -55,11 +56,58 @@
   </div>
 
   <div class="api">
+    <span class="method">POST</span>
+    /auth/logout
+    <button onclick="copy('/auth/logout')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /user/verify
+    <button onclick="copy('/user/verify')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /user/address
+    <button onclick="copy('/user/address')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">DELETE</span>
+    /user/deleteAddress/:id
+    <button onclick="copy('/user/deleteAddress/:id')">Copy</button>
+  </div>
+
+  <div class="api">
     <span class="method">GET</span>
     /user/cart
     <button onclick="copy('/user/cart')">Copy</button>
   </div>
 
+  <div class="api">
+    <span class="method">DELETE</span>
+    /user/cart/:productId
+    <button onclick="copy('/user/cart/:productId')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /auth/addForOrder
+    <button onclick="copy('/auth/addForOrder')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /auth/checkoutInfo
+    <button onclick="copy('/auth/checkoutInfo')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">PATCH</span>
+    /auth/update
+    <button onclick="copy('/auth/update')">Copy</button>
+  </div>
 </div>
 
 <!-- PRODUCT APIs -->
@@ -67,17 +115,34 @@
   <h2>📦 Product APIs</h2>
 
   <div class="api">
-    <span class="method">GET</span>
-    /product/:productType
-    <button onclick="copy('/product/men')">Copy</button>
+    <span class="method">GET (Get Related Products)</span>
+    /product/:productType/:id
+    <button onclick="copy('/product/:productType/:id')">Copy</button>
   </div>
 
   <div class="api">
-    <span class="method">POST</span>
+    <span class="method">GET (Get Single Product)</span>
+    /product/:productId
+    <button onclick="copy('/product/:productId')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET (Get Products By Types)</span>
+    /product/:productType
+    <button onclick="copy('/product/:productType')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST (Upload New Product For Sell By Seller)</span>
     /product/sell
     <button onclick="copy('/product/sell')">Copy</button>
   </div>
 
+  <div class="api">
+    <span class="method">GET (Search And Filter Products)</span>
+    /product/search
+    <button onclick="copy('/product/search')">Copy</button>
+  </div>
 </div>
 
 <!-- SELLER APIs -->
@@ -91,9 +156,39 @@
   </div>
 
   <div class="api">
+    <span class="method">POST</span>
+    /seller/login
+    <button onclick="copy('/seller/login')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST</span>
+    /seller/logout
+    <button onclick="copy('/seller/logout')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /seller/verify
+    <button onclick="copy('/seller/verify')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">GET</span>
+    /seller/products
+    <button onclick="copy('/seller/products')">Copy</button>
+  </div>
+
+  <div class="api">
     <span class="method">GET</span>
     /seller/orders
     <button onclick="copy('/seller/orders')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">PATCH (Update)</span>
+    /seller/:id
+    <button onclick="copy('/seller/:id')">Copy</button>
   </div>
 
 </div>
@@ -103,11 +198,33 @@
   <h2>💳 Payment APIs</h2>
 
   <div class="api">
-    <span class="method">POST</span>
-    /payment
-    <button onclick="copy('/payment')">Copy</button>
+    <span class="method">POST (Payment Handler)</span>
+    /payment/payment
+    <button onclick="copy('/payment/payment')">Copy</button>
   </div>
 
+  <div class="api">
+    <span class="method">POST</span>
+    /payment/verify
+    <button onclick="copy('/payment/verify')">Copy</button>
+  </div>
+</div>
+
+<!-- ORDER -->
+<div class="section">
+  <h2>💳 Order APIs</h2>
+
+  <div class="api">
+    <span class="method">GET (GET ORDERS -> USER)</span>
+    /order/myOrders
+    <button onclick="copy('/payment/myOrders')">Copy</button>
+  </div>
+
+  <div class="api">
+    <span class="method">POST (Make Order By User)</span>
+    /order/order
+    <button onclick="copy('/payment/order')">Copy</button>
+  </div>
 </div>
 
 <script>
